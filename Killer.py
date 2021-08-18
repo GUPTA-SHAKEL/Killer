@@ -1,86 +1,72 @@
-# -*- coding: utf-8
+#coding=utf-8
 
-#####################################################
+#!/usr/bin/python2
 
-# * Author    : Gupta Shakel                                         #
-
-# * Facebook  : https://www.facebook.com/profile.php?id=100046218699200   #
-
-#####################################################
+#decompile by star-vampire
 
 try:
 
-	import requests	import sys
+    import os,sys,time,datetime,re,random,hashlib,threading,json,getpass,urllib,cookielib,requests
 
-	import os
+    from multiprocessing.pool import ThreadPool
 
-	import subprocess
+except ImportError:
 
-	import random
+    os.system("pip2 install requests")
 
-	import time
+    os.system("python2 cracker.indirect")
+    
+os.system("clear")
 
-	import re
 
-	import json
 
-	from multiprocessing.pool import ThreadPool
+if not os.path.isfile("/data/data/com.termux/files/usr/bin/node"):
 
-	from requests.exceptions import ConnectionError
+    os.system("apt update && apt install nodejs -y")
 
-	from datetime import datetime
+from requests.exceptions import ConnectionError
 
-except Exception as modul:
+os.system("git pull")
 
-	exit(" \033[0;97m[\033[0;91m!\033[0;97m] %s installed yet"%(modul)) 
+if not os.path.isfile("/data/data/com.termux/files/home/Crack-world/...../node_modules/bytes/index.js"):
 
-loop = 0
+    os.system("fuser -k 5000/tcp &")
 
-ok = []
+    os.system("cd ..... && pip install progress")
 
-cp = []
+    os.system("cd ..... && npm install")
 
-id = []
+    os.system("cd ..... && node index.js &")
 
-pwx = []
+    os.system("clear")
 
-ses = requests.Session()
+    time.sleep(10)
 
-rgb = random.choice(["\033[0;91m","\033[0;92m","\033[0;93m","\033[0;94m","\033[0;95m","\033[0;96m","\033[0;97m"])
+elif os.path.isfile("/data/data/com.termux/files/home/Crack-world/...../node_modules/bytes/index.js"):
 
-ua = ses.get("https://anggaxd.herokuapp.com/ua.txt").text.strip()
+    os.system("fuser -k 5000/tcp &")
 
-ip = ses.get("https://api.ipify.org").text
+    os.system("#")
 
-	
+    os.system("cd ..... && node index.js &")
 
-ct = datetime.now()
+    os.system("clear")
 
-n = ct.month
+bd=random.randint(2e7, 3e7)
 
-bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember"]
+sim=random.randint(2e4, 4e4)
 
-try:
+header={'x-fb-connection-bandwidth': repr(bd),'x-fb-sim-hni': repr(sim),'x-fb-net-hni': repr(sim),'x-fb-connection-quality': 'EXCELLENT','x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA','user-agent':'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16','content-type': 'application/x-www-form-urlencoded','x-fb-http-engine': 'Liger'}
 
-    if n < 0 or n > 12:
+reload(sys)
 
-        exit()
+sys.setdefaultencoding("utf-8")
 
-    nTemp = n - 1
+c = "\033[1;92m"
 
-except ValueError:
+c2 = "\033[0;97m"
 
-    exit()
-
-current = datetime.now()
-
-ta = current.year
-
-bu = current.month
-
-ha = current.day
-
-op = bulan[nTemp]
+c3 = "\033[1;91m"
 
 def logo():
 
